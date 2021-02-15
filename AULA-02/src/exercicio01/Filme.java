@@ -12,16 +12,32 @@ public class Filme {
         this.nome = nome;
         this.descricao = descricao;
         this.duracao = duracao;
-        this.anoLancamento = anoLancamento;
         this.avaliacao = avaliacao;
+        verificaRange();
+        this.anoLancamento = anoLancamento;
         this.diretor = diretor;
+
+    }
+
+    public void verificaRange(){
+        if (this.avaliacao<1 || this.avaliacao>5){
+            System.out.println("Avaliçao fora do range.");
+            this.avaliacao=3;
+        }
+        if(this.nome=="Clube da Luta"){
+            this.avaliacao=5;
+        }else if(this.nome=="Batman vs Superman"){
+            this.avaliacao=1;
+        }
+
     }
 
     public void reproduzirFilme(){
         System.out.println("Filme: " + this.nome);
         System.out.println("Descricao: " + this.descricao);
         System.out.println("Duracao: " + this.duracao);
-        System.out.println("Diretor: " + diretor.getNome());
+        System.out.println("Avaliacao: " + this.avaliacao);
+        System.out.println("Diretor: " + this.diretor.getNome());
     }
 
 }
