@@ -2,7 +2,7 @@ package Projeto;
 
 import java.text.DecimalFormat;
 
-public class Imovel {
+public abstract class Imovel {
     private Endereco endereco;
     private double valor;
 
@@ -12,16 +12,7 @@ public class Imovel {
     }
 
     //método deve retornar uma string com endereço e valor do imóvel
-    public String apresentcao(){
-        return ("Imóvel localizado no seguinte endereço:" +
-                "\nLogradouro: " + endereco.getLogradouro()+
-                "\nNúmero: " + endereco.getNumero()+
-                "\nComplemento: " + endereco.getComplemento()+
-                "\nBairro: " + endereco.getBairro()+
-                "\nCidade: " + endereco.getCidade()+
-                "\nEstado: " + endereco.getEstado().getDescricao()+
-                "\nValor: R$ " + DecimalFormat.getCurrencyInstance().format(this.valor));
-    }
+    public abstract String apresentcao();
 
     public Endereco getEndereco() {
         return endereco;
