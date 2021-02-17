@@ -29,13 +29,13 @@ public enum UnidadeFederativa {
     SERGIPE("Sergipe"),
     TOCANTINS("Tocantins");
 
-    private String estado;
+    private String descricao;
 
-    UnidadeFederativa(String estado) {
-        this.estado = estado;
+    UnidadeFederativa(String descricao) {
+        this.descricao = descricao;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getDescricao() {
+        return descricao;
     }
 }

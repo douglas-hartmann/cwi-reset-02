@@ -1,5 +1,6 @@
 package Projeto;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,7 @@ public class ImoveisParaFinanciamento {
     public void registrarImovel(Imovel imovel) {
 
         if (imovel.getValor()<50000 || imovel.getValor()>1000000){
-            System.out.println("Atenção, problema de registro! Imóveis com valor R$ " + imovel.getValor() + "não são aceitos no programa ");
+            System.out.println("Atenção, problema de registro! Imóvel com valor R$ " + DecimalFormat.getCurrencyInstance().format(imovel.getValor())+ " não é aceito no programa.");
         }else{
             imoveis.add(imovel);
         }

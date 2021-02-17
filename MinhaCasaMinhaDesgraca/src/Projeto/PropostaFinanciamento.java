@@ -22,13 +22,13 @@ public class PropostaFinanciamento {
      *      o salário multiplicado pelo prazo deve ser equivalente a 65% e 60% do valor imóvel (respectivamente).
      */
     public void validarProposta() {
-        if("São Paulo".equals(imovel.getEndereco().getEstado())){
+        if("São Paulo".equals(imovel.getEndereco().getEstado().getDescricao())){
             if((beneficiario.getSalario() * mesesParaPagamento) >= (imovel.getValor()*0.65)){
                 imprimirPropostaAprovada();
             }else {
                 imprimirPropostaNegada();
             }
-        }else if("Rio de Janeiro".equals(imovel.getEndereco().getEstado())) {
+        }else if("Rio de Janeiro".equals(imovel.getEndereco().getEstado().getDescricao())) {
             if ((beneficiario.getSalario() * mesesParaPagamento) >= (imovel.getValor() * 0.60)) {
                 imprimirPropostaAprovada();
             } else {
