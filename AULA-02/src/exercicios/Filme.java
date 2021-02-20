@@ -1,5 +1,7 @@
 package exercicios;
 
+import java.util.List;
+
 public class Filme {
     private String nome;
     private String descricao;
